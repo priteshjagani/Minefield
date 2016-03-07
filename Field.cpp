@@ -51,7 +51,11 @@ FieldType Field::get(int x, int y)
  bool Field::isSafe(int x, int y)
  {
  	//TODO: Complete this function, isSafe(int,int)
- 	return true;
+    if( x< 0 || x>= FIELD_DIMENSION || y< 0 || y>= FIELD_DIMENSION)
+    {
+        return false;
+    }
+    
  }
 
 /**

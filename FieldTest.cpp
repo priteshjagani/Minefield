@@ -26,18 +26,11 @@ TEST(FieldTest, placeMineInBounds)
 	ASSERT_EQ( MINE_HIDDEN, minefield.get(4,5) );
 }
 
-//Just to test if this is working in incorrect case
-TEST(FieldTest, MineInBounds)
+
+//To check if the player moves out of the boundary condition
+TEST(FieldTest, isSafeBoundaryCondition)
 {
 	Field minefield;
-	minefield.placeMine(0,0);
-	ASSERT_EQ( MINE_HIDDEN, minefield.get(4,5) );
-}
-
-
-TEST(FieldTest, isSafeCase)
-{
-	Field minefield;
-	minefield.placeMine(4,5);
+	minefield.isSafe(100,5);
 	ASSERT_EQ( MINE_HIDDEN, minefield.get(4,5) );
 }
