@@ -55,6 +55,10 @@ FieldType Field::get(int x, int y)
     {
         return false;
     }
+    else
+    {
+        return true;
+    }
     
  }
 

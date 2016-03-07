@@ -31,6 +31,11 @@ TEST(FieldTest, placeMineInBounds)
 TEST(FieldTest, isSafeBoundaryCondition)
 {
 	Field minefield;
-	minefield.isSafe(100,5);
-	ASSERT_EQ( MINE_HIDDEN, minefield.get(4,5) );
+    ASSERT_FALSE(minefield.isSafe(100,5));
+}
+//To check if the player is inside the board
+TEST(FieldTest, isSafeInsideMap)
+{
+	Field minefield;
+	ASSERT_TRUE(minefield.isSafe(4,5));
 }
