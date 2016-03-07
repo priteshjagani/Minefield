@@ -39,3 +39,19 @@ TEST(FieldTest, isSafeInsideMap)
 	Field minefield;
 	ASSERT_TRUE(minefield.isSafe(4,5));
 }
+TEST(FieldTest, isSafeHiddenMine)
+{
+	Field minefield;
+	ASSERT_TRUE(minefield.isSafe(4,5));
+}
+TEST(FieldTest, isSafeHide)
+{
+	Field minefield;
+	ASSERT_TRUE(minefield.isSafe(1,5));
+}
+
+TEST(FieldTest, isSafeZero)
+{
+	Field minefield;
+	ASSERT_TRUE(minefield.isSafe(0,0));
+}

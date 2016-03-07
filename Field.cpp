@@ -55,7 +55,11 @@ FieldType Field::get(int x, int y)
     {
         return false;
     }
-    else
+     else if(get(x,y) == MINE_HIDDEN || get(x,y) == MINE_SHOWN )
+  {
+      return true;
+  }
+    else if(get(x,y) == EMPTY_HIDDEN ||  get (x,y) == EMPTY_SHOWN)
     {
         return true;
     }
