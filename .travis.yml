@@ -2,4 +2,4 @@ language: c++
 compiler:
   - clang
   - gcc
-script: g++ Field.h Field.cpp
+script: g++ main.cpp Field.h Field.cpp
